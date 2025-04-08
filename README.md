@@ -37,10 +37,10 @@ This repository facilitates the setup and deployment of [GIMIC](https://github.c
 
 3.Run the desired script:
  
-    # To set up the virtual environment
-    ./GIMIC_virtual-env_automation.sh
+  # To set up the GIMIC cakculation in virtual environment
+    bash GIMIC_virtual-env_automation.sh
 
-    # To execute the GIMIC calculation
+  # To execute the GIMIC calculation
     ./GIMIC_automation.sh
 
 
