@@ -23,7 +23,7 @@ This repository facilitates the setup and deployment of [GIMIC](https://github.c
 
 1. Ensure either desired scripts are executable: 
 
-       ```bash
+       
         chmod +x GIMIC_virtual-env_automation.sh
         chmod +x GIMIC_automation.sh
 
