@@ -41,7 +41,7 @@ This repository facilitates the setup and deployment of [GIMIC](https://github.c
     bash GIMIC_virtual-env_automation.sh
 
   # To execute the GIMIC calculation
-    ./GIMIC_automation.sh
+    bash GIMIC_automation.sh
 
 
 4.Requirements
