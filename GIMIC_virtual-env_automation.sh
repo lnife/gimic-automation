@@ -1388,5 +1388,5 @@ echo -e "\e[3;38;2;139;96;87m---------------------------------------------\nDeac
 deactivate
 
 # Final completion message
-echo -e "\e[38;2;1;144;83mDone. Environment closed.\e[0m"
+echo -e "\e[38;2;1;144;83mDone. Environment closed.\n---------------------------------------------\n\e[0m"
 
