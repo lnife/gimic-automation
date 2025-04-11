@@ -1367,5 +1367,5 @@ fi
 echo -e "\e[3;38;2;139;96;87m---------------------------------------------\nCalculation complete\n\e[0m"
 
 # Final completion message
-echo -e "\e[38;2;1;144;83mDone.\e[0m"
+echo -e "\e[38;2;1;144;83mDone.\n---------------------------------------------\n\e[0m"
 
