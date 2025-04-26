@@ -1353,19 +1353,14 @@ echo
 # Step 5: Creating CML coordinate file for visualization software
 echo -e "\e[38;2;142;180;139m---------------------------------------------\nConverting mol.xyz file to mol.cml/mol-bhor.cml file\n\e[0m"
 function molecule() {
-    obabel -ixyz mol.xyz -O mol.cml
-    awk '{FS="\""; OFS="\"";
-         if ($1 ~ "<atom id") {
-             if ($5 ~ "spinMultiplicity")
-                 { print $1, $2, $3, $4, $5, $6, $7, $8/0.526, $9, $10/0.526, $11, $12/0.526, $13 }
-             else  { print $1, $2, $3, $4, $5, $6/0.526, $7, $8/0.526, $9, $10/0.526, $11 }
-             }
-         else print $0; }' mol.cml > mol-bohr.cml
+    # Convert the XYZ file to a CML file using Babel
+    obabel -ixyz mol.xyz -ocml -Omol.cml
+
+    # Use sed to modify the CML content, handling the entire line
+    sed 's/\(<atom id[^>]*\)spinMultiplicity="\([^"]*\)"/\1spinMultiplicity="\2"/' mol.cml > mol-bohr.cml
 }
 
-
 # It takes an XYZ file as an argument:
-
 molecule mol.xyz
 
 echo -e "\e[38;2;142;180;139mCoordinates converted and saved to mol-bohr.cml\e[0m"
