@@ -10,12 +10,14 @@ This repository facilitates the setup and deployment of [GIMIC](https://github.c
 
 ## Contents
 
-- `GIMIC_virtual-env_automation.sh`  (use this if you have installed GIMIC in virtual environment) 
+- `GIMIC_virtual-env_automation.sh`  (use this if you have installed GIMIC in virtual environment)
+  
   Automates the creation of a Python virtual environment and installs all required dependencies for GIMIC.  
   > 🔧 *Make sure to modify the `ACTIVATE_SCRIPT` variable in the script to reflect the correct path to your virtual environment, e.g.:*  
   `ACTIVATE_SCRIPT="/home/path/to/your/gimic_env/bin/activate"`
 
 - `GIMIC_automation.sh`  (use this if you have installed GIMIC system-wide)
+  
   Manages the execution of GIMIC computations using Gaussian output files and a predefined `gimic.inp` configuration file. This script supports automated and batch-mode workflows.
 
 ## Usage
