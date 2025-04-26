@@ -1359,6 +1359,23 @@ else
     echo -e "\e[3;38;2;250;103;117mError: GIMIC calculation failed. Check gimic.out for details.\e[0m"
 fi
 
+# Step 6: Removing the Python files and the temporary files
+# Define cleanup function to remove temporary files
+cleanup() {
+    echo -e "\e[38;2;142;180;139mCleaning up temporary files...\e[0m"
+    
+    # Remove Python script files
+    rm -f Gaussian2gimic.py BasisSet.py
+    
+    # Find and remove __pycache__ directories
+    find . -type d -name "__pycache__" -exec rm -rf {} \+
+    
+    echo -e "\e[38;2;142;180;139mCleanup complete.\e[0m"
+}
+# Set trap to call cleanup function when script exits
+trap cleanup EXIT
+
+
 echo -e "\e[3;38;2;139;96;87m---------------------------------------------\nCalculation complete\n\e[0m"
 
 # Final completion message
